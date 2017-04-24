@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>FlexBox</title>
+		<style>
+			.m1{
+				height: 300px;
+				background: #00C378;
+				display: flex;/*成为伸缩Flexbox布局*/
+				flex-direction:row;
+				/*改变主轴方向，主轴与侧轴一定垂直
+				1.默认是row(横向，从左往右排列)
+			    2.row-reverse(反向横向，从右往左排列)
+				3.column(纵向，从上往下排列)
+				4.column-reverse(反向纵向，从下往上排列)*/       
+				flex-wrap: wrap;
+				justify-content: flex-start;				
+			   	/*定义伸缩位置沿着主轴的对齐方式
+			   	1.flex-start(默认):向一行的起始位置靠齐
+			   	2.flex-end:向一行的结束位置靠齐 
+			   	3.center:向一行的中间位置靠齐  
+			   	4.space-between:项目会平均分布在行内，第一个伸缩项目在最开始位置，最后一个在一行的最终位置            */                                                                                                       
+			    align-items: stretch;
+			    /*设置伸缩项目在侧轴的对齐方式
+			     1.stretch(默认)：项目填充拉伸整个伸缩容器
+			     2.flex-start：项目在侧轴起点边的外边距紧靠侧轴起始边
+			     3.flex-end：项目在侧轴终点边的外边距紧靠侧轴终点边
+			     4.center：居中
+			     * */
+			    align-content: flex-start;
+			     /*以行为单位的对齐方式;
+			    1.flex-start:各行向伸缩容器起点处对齐,行与行之间无空隙
+			    2.flex-end:各行向伸缩容器终点处对齐,行与行之间无空隙
+			    3. center:各行向伸缩容器中点处对齐,行与行之间无空隙
+			    4.space-between:各行在容器内平均分布,第一行和容器起点对齐,最后一行和容器终点对齐
+			    5.space-around:各行在容器内平均分布,第一和最终行都有一半空间*/
+			    }
+			.m1 div{
+				width: 50px;
+				height: 50px;
+			}
+			.l1{
+				background: #0000FF;
+				/*表示伸缩项的序列号,用来设置伸缩项的位置:默认是0,数字越大,排越后面*/
+				align-self: stretch;
+				/*就是align-items的单独版,只能用来设置单独的项目,属性值和align-items相同*/
+				flex-grow: 2;
+				/*用来设置每个项目的大小，如果属性值相同.则每个项目平分一行，按比例分配*/
+			}
+			.l2{
+				background: #204D74;
+				flex-grow: 1;
+			}
+			.l3{
+				background: #843534;
+				flex-grow: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="m1">
+			<div class="l1">1</div>
+			<div class="l2">2</div>
+			<div class="l3">3</div>		
+		</div>
+	</body>
+</html>

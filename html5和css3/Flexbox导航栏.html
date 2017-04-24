@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Flexbox导航栏</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body{
+				background: #111;
+				color: #fff;
+				font-family: "微软雅黑";
+				font-size: 14px;
+			}
+			
+			a{
+				color: #FFFFFF;
+				text-decoration: none;
+			}
+			
+			nav{
+			   height: 100px;
+			   text-align: center;
+			   display: flex;
+			   text-transform: capitalize;
+			   flex-wrap: wrap;
+			}
+			nav a{
+				background: rgba(255,255,255,0.2);
+				flex-grow: 2;
+				display: flex;
+				align-items: center;
+			}
+			nav a:hover{
+				background: rgba(255,255,255,0.4);
+			}
+			span{
+				flex: 1;
+			}
+			.sign{
+				flex-grow: 1;
+				background: rgba(255,255,255,0.1);
+			}
+			@media only screen and (max-width: 460px) {
+				nav a{
+					flex-basis: 25%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a href="#"><span>首页</span></a>
+			<a href="#"><span>视频</span></a>
+			<a href="#"><span>代码</span></a>
+			<a href="#"><span>课程</span></a>
+			<a href="#" class="sign sign_in"><span>登录</span></a>
+			<a href="#" class="sign sign_up"><span>注册</span></a>
+		</nav>
+	</body>
+</html>
